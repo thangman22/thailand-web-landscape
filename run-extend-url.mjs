@@ -1,7 +1,18 @@
 import extendLink from './libs/extendLink.mjs'
 import fs from 'fs'
 
-const urls = fs.readFileSync('./auditDomains.csv', 'utf8').split('\n')
+// quick and dirty CSV parsing, keep only first column for now
+function csvToUrlList(csv) {
+  const rows = csv.split("\n").slice(1);  // remove header
+  const result = [];
+
+  for (const row of rows) {
+    const values = row.split(",")[0];  // keep only first column
+    result.push(values);
+  }
+
+  return result
+}
 
 function shuffle (array) {
   let currentIndex = array.length; let randomIndex
@@ -14,6 +25,10 @@ function shuffle (array) {
 
   return array
 }
+
+const csv = fs.readFileSync('./auditDomains.csv', 'utf8')
+const urls = csvToUrlList(csv)
+
 fs.writeFileSync('./auditUrls.csv', '')
 fs.appendFileSync('./auditUrls.csv', 'Domain, Link\n')
 for (const url of urls) {
