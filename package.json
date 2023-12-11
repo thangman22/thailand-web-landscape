@@ -4,13 +4,24 @@
   "main": "index.js",
   "type": "module",
   "license": "MIT",
+  "scripts": {
+    "extend": "CHROMIUM_BIN='/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev' node run-extend-url.mjs"
+  },
   "dependencies": {
     "axios": "^1.6.2",
     "csvtojson": "^2.0.10",
     "lighthouse": "^10.3.0",
+    "poolifier": "^3.0.10",
     "puppeteer": "^21.6.0",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
-    "wappalyzer": "^6.10.63"
+    "wappalyzer": "6.10.63"
+  },
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.4.0",
+    "eslint-plugin-promise": "^6.1.1"
   }
 }

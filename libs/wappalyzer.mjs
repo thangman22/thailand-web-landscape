@@ -1,7 +1,6 @@
 import Wappalyzer from 'wappalyzer'
 
 export default async (url) => {
-
   const options = {
     debug: false,
     delay: 500,
@@ -16,8 +15,8 @@ export default async (url) => {
     htmlMaxCols: 2000,
     htmlMaxRows: 2000,
     noScripts: false,
-    noRedirect: false,
-  };
+    noRedirect: false
+  }
   try {
     const wappalyzer = new Wappalyzer(options)
     await wappalyzer.init()
@@ -28,5 +27,4 @@ export default async (url) => {
   } catch (error) {
     return false
   }
-
 }
