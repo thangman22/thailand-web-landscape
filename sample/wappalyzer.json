@@ -1,0 +1,186 @@
+[
+    {
+        "name": "WordPress",
+        "type": "cms"
+    },
+    {
+        "name": "MySQL",
+        "type": "databases"
+    },
+    {
+        "name": "PHP",
+        "type": "programming-languages"
+    },
+    {
+        "name": "anime.js",
+        "type": "javascript-graphics"
+    },
+    {
+        "name": "Element UI",
+        "type": "ui-frameworks"
+    },
+    {
+        "name": "Hello Elementor",
+        "type": "wordpress-themes"
+    },
+    {
+        "name": "React",
+        "type": "javascript-frameworks"
+    },
+    {
+        "name": "Essential Addons for Elementor",
+        "type": "wordpress-plugins"
+    },
+    {
+        "name": "Crocoblock JetElements",
+        "type": "wordpress-plugins"
+    },
+    {
+        "name": "HubSpot WordPress plugin",
+        "type": "wordpress-plugins"
+    },
+    {
+        "name": "Ultimate Addons for Elementor",
+        "type": "wordpress-plugins"
+    },
+    {
+        "name": "Elementor",
+        "type": "page-builders"
+    },
+    {
+        "name": "Vue.js",
+        "type": "javascript-frameworks"
+    },
+    {
+        "name": "GSAP",
+        "type": "javascript-frameworks"
+    },
+    {
+        "name": "Yoast SEO",
+        "type": "seo"
+    },
+    {
+        "name": "styled-components",
+        "type": "javascript-frameworks"
+    },
+    {
+        "name": "Amazon Web Services",
+        "type": "paas"
+    },
+    {
+        "name": "Nginx",
+        "type": "web-servers"
+    },
+    {
+        "name": "HubSpot Analytics",
+        "type": "analytics"
+    },
+    {
+        "name": "jQuery CDN",
+        "type": "cdn"
+    },
+    {
+        "name": "Polylang",
+        "type": "wordpress-plugins"
+    },
+    {
+        "name": "Linkedin Ads",
+        "type": "advertising"
+    },
+    {
+        "name": "Google Tag Manager",
+        "type": "tag-managers"
+    },
+    {
+        "name": "Getsitecontrol",
+        "type": "widgets"
+    },
+    {
+        "name": "Amazon S3",
+        "type": "cdn"
+    },
+    {
+        "name": "Swiper",
+        "type": "javascript-libraries"
+    },
+    {
+        "name": "Microsoft Clarity",
+        "type": "analytics"
+    },
+    {
+        "name": "Linkedin Insight Tag",
+        "type": "analytics"
+    },
+    {
+        "name": "jQuery UI",
+        "type": "javascript-libraries"
+    },
+    {
+        "name": "jQuery Migrate",
+        "type": "javascript-libraries"
+    },
+    {
+        "name": "jQuery",
+        "type": "javascript-libraries"
+    },
+    {
+        "name": "HubSpot",
+        "type": "marketing-automation"
+    },
+    {
+        "name": "Hotjar",
+        "type": "analytics"
+    },
+    {
+        "name": "Google Analytics",
+        "type": "analytics"
+    },
+    {
+        "name": "Google AdSense",
+        "type": "advertising"
+    },
+    {
+        "name": "Facebook Pixel",
+        "type": "analytics"
+    },
+    {
+        "name": "core-js",
+        "type": "javascript-libraries"
+    },
+    {
+        "name": "Tippy.js",
+        "type": "javascript-libraries"
+    },
+    {
+        "name": "reCAPTCHA",
+        "type": "security"
+    },
+    {
+        "name": "Google Font API",
+        "type": "font-scripts"
+    },
+    {
+        "name": "Mailgun",
+        "type": "email"
+    },
+    {
+        "name": "Google Workspace",
+        "type": "webmail"
+    },
+    {
+        "name": "SiteGround",
+        "type": "paas"
+    },
+    {
+        "name": "LottieFiles",
+        "type": "miscellaneous"
+    },
+    {
+        "name": "Popper",
+        "type": "miscellaneous"
+    },
+    {
+        "name": "Open Graph",
+        "type": "miscellaneous"
+    }
+]

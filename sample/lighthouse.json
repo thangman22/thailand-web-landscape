@@ -1,0 +1,385 @@
+{
+    "audits": {
+        "accessibility": {
+            "accesskeys": null,
+            "aria-allowed-attr": 1,
+            "aria-command-name": 0,
+            "aria-hidden-body": 1,
+            "aria-hidden-focus": 1,
+            "aria-input-field-name": null,
+            "aria-meter-name": null,
+            "aria-progressbar-name": null,
+            "aria-required-attr": 1,
+            "aria-required-children": null,
+            "aria-required-parent": null,
+            "aria-roles": 1,
+            "aria-toggle-field-name": null,
+            "aria-tooltip-name": null,
+            "aria-treeitem-name": null,
+            "aria-valid-attr-value": 1,
+            "aria-valid-attr": 1,
+            "button-name": null,
+            "bypass": null,
+            "color-contrast": 0,
+            "definition-list": null,
+            "dlitem": null,
+            "document-title": 1,
+            "duplicate-id-active": null,
+            "duplicate-id-aria": 1,
+            "form-field-multiple-labels": null,
+            "frame-title": null,
+            "heading-order": 0,
+            "html-has-lang": 1,
+            "html-lang-valid": 1,
+            "html-xml-lang-mismatch": null,
+            "image-alt": 1,
+            "input-button-name": null,
+            "input-image-alt": null,
+            "label": null,
+            "link-name": 0,
+            "list": 1,
+            "listitem": 1,
+            "meta-refresh": null,
+            "meta-viewport": 1,
+            "object-alt": null,
+            "tabindex": 1,
+            "table-fake-caption": null,
+            "td-has-header": null,
+            "td-headers-attr": null,
+            "th-has-data-cells": null,
+            "valid-lang": 1,
+            "video-caption": null,
+            "logical-tab-order": null,
+            "focusable-controls": null,
+            "interactive-element-affordance": null,
+            "managed-focus": null,
+            "focus-traps": null,
+            "custom-controls-labels": null,
+            "custom-controls-roles": null,
+            "visual-order-follows-dom": null,
+            "offscreen-content-hidden": null,
+            "use-landmarks": null
+        },
+        "best-practices": {
+            "is-on-https": 1,
+            "geolocation-on-start": 1,
+            "notification-on-start": 1,
+            "csp-xss": null,
+            "paste-preventing-inputs": 1,
+            "image-aspect-ratio": 1,
+            "image-size-responsive": 1,
+            "preload-fonts": null,
+            "doctype": 1,
+            "charset": 1,
+            "no-unload-listeners": 0,
+            "js-libraries": null,
+            "deprecations": 0,
+            "errors-in-console": 0,
+            "valid-source-maps": 0,
+            "inspector-issues": 0
+        },
+        "seo": {
+            "viewport": 1,
+            "document-title": 1,
+            "meta-description": 1,
+            "http-status-code": 1,
+            "link-text": 1,
+            "crawlable-anchors": 0,
+            "is-crawlable": 1,
+            "robots-txt": 1,
+            "image-alt": 1,
+            "hreflang": 1,
+            "canonical": 1,
+            "font-size": null,
+            "plugins": 1,
+            "tap-targets": null,
+            "structured-data": null
+        },
+        "pwa": {
+            "installable-manifest": 0,
+            "service-worker": 0,
+            "splash-screen": 0,
+            "themed-omnibox": 0,
+            "content-width": null,
+            "viewport": 1,
+            "maskable-icon": 0,
+            "pwa-cross-browser": null,
+            "pwa-page-transitions": null,
+            "pwa-each-page-has-url": null
+        },
+        "performance": {
+            "first-contentful-paint": {
+                "score": 0.04,
+                "numericValue": 3216.5740000000014
+            },
+            "largest-contentful-paint": {
+                "score": 0,
+                "numericValue": 15076.61400000002
+            },
+            "total-blocking-time": {
+                "score": 0.12,
+                "numericValue": 757.5
+            },
+            "cumulative-layout-shift": {
+                "score": 0.99,
+                "numericValue": 0.039918860762440445
+            },
+            "speed-index": {
+                "score": 0,
+                "numericValue": 13854.983635533947
+            },
+            "interactive": {
+                "score": 0,
+                "numericValue": 17724.80250000002
+            },
+            "max-potential-fid": {
+                "score": 0.69,
+                "numericValue": 193
+            },
+            "first-meaningful-paint": {
+                "score": 0.04,
+                "numericValue": 3216.5740000000014
+            },
+            "render-blocking-resources": {
+                "score": 0.45,
+                "numericValue": 1118
+            },
+            "uses-responsive-images": {
+                "score": 0.47,
+                "numericValue": 1020
+            },
+            "offscreen-images": {
+                "score": 1,
+                "numericValue": 0
+            },
+            "unminified-css": {
+                "score": 1,
+                "numericValue": 0
+            },
+            "unminified-javascript": {
+                "score": 0.86,
+                "numericValue": 190
+            },
+            "unused-css-rules": {
+                "score": 0.56,
+                "numericValue": 750
+            },
+            "unused-javascript": {
+                "score": 0.16,
+                "numericValue": 3740
+            },
+            "uses-optimized-images": {
+                "score": 1,
+                "numericValue": 0
+            },
+            "modern-image-formats": {
+                "score": 0.56,
+                "numericValue": 750
+            },
+            "uses-text-compression": {
+                "score": 1,
+                "numericValue": 0
+            },
+            "uses-rel-preconnect": {
+                "score": 0.72,
+                "numericValue": 390.704
+            },
+            "server-response-time": {
+                "score": 0,
+                "numericValue": 2080.9829999999997
+            },
+            "redirects": {
+                "score": 1,
+                "numericValue": 0
+            },
+            "uses-http2": {
+                "score": 1,
+                "numericValue": 0
+            },
+            "efficient-animated-content": {
+                "score": 1,
+                "numericValue": 0
+            },
+            "duplicated-javascript": {
+                "score": 1,
+                "numericValue": 0
+            },
+            "legacy-javascript": {
+                "score": 0.86,
+                "numericValue": 190
+            },
+            "prioritize-lcp-image": {
+                "score": 1,
+                "numericValue": 0
+            },
+            "total-byte-weight": {
+                "score": 0.52,
+                "numericValue": 4012927
+            },
+            "uses-long-cache-ttl": {
+                "score": 0.25,
+                "numericValue": 286611.8577523148
+            },
+            "dom-size": {
+                "score": 0.79,
+                "numericValue": 988
+            },
+            "bootup-time": {
+                "score": 0.7,
+                "numericValue": 2313.4839999999995
+            },
+            "mainthread-work-breakdown": {
+                "score": 0.34,
+                "numericValue": 4947.003999999822
+            },
+            "lcp-lazy-loaded": {
+                "score": 1
+            },
+            "uses-passive-event-listeners": {
+                "score": 1
+            },
+            "no-document-write": {
+                "score": 1
+            },
+            "viewport": {
+                "score": 1
+            },
+            "network-rtt": {
+                "score": null,
+                "numericValue": 253.534
+            },
+            "network-server-latency": {
+                "score": null,
+                "numericValue": 300.68399999999997
+            }
+        }
+    },
+    "fullMetrics": {
+        "firstContentfulPaint": 3217,
+        "firstMeaningfulPaint": 3217,
+        "largestContentfulPaint": 15077,
+        "interactive": 17725,
+        "speedIndex": 13855,
+        "totalBlockingTime": 758,
+        "maxPotentialFID": 193,
+        "cumulativeLayoutShift": 0.039918860762440445,
+        "cumulativeLayoutShiftMainFrame": 0.039918860762440445,
+        "lcpLoadStart": 14451,
+        "lcpLoadEnd": 14579,
+        "timeToFirstByte": 4237,
+        "observedTimeOrigin": 0,
+        "observedTimeOriginTs": 2732850455,
+        "observedNavigationStart": 0,
+        "observedNavigationStartTs": 2732850455,
+        "observedFirstPaint": 4486,
+        "observedFirstPaintTs": 2737336322,
+        "observedFirstContentfulPaint": 4486,
+        "observedFirstContentfulPaintTs": 2737336322,
+        "observedFirstContentfulPaintAllFrames": 4486,
+        "observedFirstContentfulPaintAllFramesTs": 2737336322,
+        "observedFirstMeaningfulPaint": 4499,
+        "observedFirstMeaningfulPaintTs": 2737348989,
+        "observedLargestContentfulPaint": 5178,
+        "observedLargestContentfulPaintTs": 2738028932,
+        "observedLargestContentfulPaintAllFrames": 5178,
+        "observedLargestContentfulPaintAllFramesTs": 2738028932,
+        "observedTraceEnd": 12092,
+        "observedTraceEndTs": 2744942743,
+        "observedLoad": 9755,
+        "observedLoadTs": 2742605315,
+        "observedDomContentLoaded": 4984,
+        "observedDomContentLoadedTs": 2737834423,
+        "observedCumulativeLayoutShift": 0.039918860762440445,
+        "observedCumulativeLayoutShiftMainFrame": 0.039918860762440445,
+        "observedFirstVisualChange": 4487,
+        "observedFirstVisualChangeTs": 2737337455,
+        "observedLastVisualChange": 6347,
+        "observedLastVisualChangeTs": 2739197455,
+        "observedSpeedIndex": 5547,
+        "observedSpeedIndexTs": 2738397214
+    },
+    "fullDiagnostics": {
+        "numRequests": 164,
+        "numScripts": 67,
+        "numStylesheets": 34,
+        "numFonts": 8,
+        "numTasks": 3841,
+        "numTasksOver10ms": 29,
+        "numTasksOver25ms": 11,
+        "numTasksOver50ms": 3,
+        "numTasksOver100ms": 0,
+        "numTasksOver500ms": 0,
+        "rtt": 0,
+        "throughput": 31419489.930227455,
+        "maxRtt": 253.534,
+        "maxServerLatency": 300.68399999999997,
+        "totalByteWeight": 4012927,
+        "totalTaskTime": 1236.7509999999565,
+        "mainDocumentTransferSize": 26302
+    },
+    "score": {
+        "pwa": 25,
+        "accessibility": 91,
+        "seo": 92,
+        "performance": 29,
+        "best-practices": 67
+    },
+    "thirdParty": [
+        {
+            "name": "Google Fonts",
+            "category": "cdn"
+        },
+        {
+            "name": "Google Tag Manager",
+            "category": "tag-manager"
+        },
+        {
+            "name": "GetSiteControl",
+            "category": "utility"
+        },
+        {
+            "name": "Hubspot",
+            "category": "marketing"
+        },
+        {
+            "name": "Other Google APIs/SDKs",
+            "category": "utility"
+        },
+        {
+            "name": "Clarity",
+            "category": "utility"
+        },
+        {
+            "name": "Hotjar",
+            "category": "analytics"
+        },
+        {
+            "name": "Facebook",
+            "category": "social"
+        },
+        {
+            "name": "Amazon Web Services",
+            "category": "other"
+        },
+        {
+            "name": "LinkedIn Ads",
+            "category": "ad"
+        },
+        {
+            "name": "Google CDN",
+            "category": "cdn"
+        },
+        {
+            "name": "Google Analytics",
+            "category": "analytics"
+        },
+        {
+            "name": "Google/Doubleclick Ads",
+            "category": "ad"
+        },
+        {
+            "name": "Bing Ads",
+            "category": "ad"
+        }
+    ]
+}
