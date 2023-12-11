@@ -9,3 +9,6 @@ We plan to utilize tools like Pagespeed Insight and Wappalyzer to analyze a sele
 1. Fork this repo
 2. Edit file ```auditDomains.csv```
 3. Open pull request
+
+
+Sample data that we collect will contain in ```sample``` folder
