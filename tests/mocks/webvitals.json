@@ -1,0 +1,127 @@
+{
+    "id": "https://www.sanook.com/",
+    "metrics": {
+      "CUMULATIVE_LAYOUT_SHIFT_SCORE": {
+        "percentile": 4,
+        "distributions": [
+          {
+            "min": 0,
+            "max": 10,
+            "proportion": 0.88663755458515259
+          },
+          {
+            "min": 10,
+            "max": 25,
+            "proportion": 0.076157205240174636
+          },
+          {
+            "min": 25,
+            "proportion": 0.037205240174672485
+          }
+        ],
+        "category": "FAST"
+      },
+      "EXPERIMENTAL_TIME_TO_FIRST_BYTE": {
+        "percentile": 172,
+        "distributions": [
+          {
+            "min": 0,
+            "max": 800,
+            "proportion": 0.9382167961524196
+          },
+          {
+            "min": 800,
+            "max": 1800,
+            "proportion": 0.03773584905660364
+          },
+          {
+            "min": 1800,
+            "proportion": 0.024047354790972669
+          }
+        ],
+        "category": "FAST"
+      },
+      "FIRST_CONTENTFUL_PAINT_MS": {
+        "percentile": 946,
+        "distributions": [
+          {
+            "min": 0,
+            "max": 1800,
+            "proportion": 0.89639561204944018
+          },
+          {
+            "min": 1800,
+            "max": 3000,
+            "proportion": 0.052934006616750177
+          },
+          {
+            "min": 3000,
+            "proportion": 0.050670381333797421
+          }
+        ],
+        "category": "FAST"
+      },
+      "FIRST_INPUT_DELAY_MS": {
+        "percentile": 13,
+        "distributions": [
+          {
+            "min": 0,
+            "max": 100,
+            "proportion": 0.84801499403646008
+          },
+          {
+            "min": 100,
+            "max": 300,
+            "proportion": 0.032714261373317323
+          },
+          {
+            "min": 300,
+            "proportion": 0.11927074459021969
+          }
+        ],
+        "category": "FAST"
+      },
+      "INTERACTION_TO_NEXT_PAINT": {
+        "percentile": 569,
+        "distributions": [
+          {
+            "min": 0,
+            "max": 200,
+            "proportion": 0.32519659239842719
+          },
+          {
+            "min": 200,
+            "max": 500,
+            "proportion": 0.39072739187418076
+          },
+          {
+            "min": 500,
+            "proportion": 0.28407601572739088
+          }
+        ],
+        "category": "SLOW"
+      },
+      "LARGEST_CONTENTFUL_PAINT_MS": {
+        "percentile": 1614,
+        "distributions": [
+          {
+            "min": 0,
+            "max": 2500,
+            "proportion": 0.87107352433551433
+          },
+          {
+            "min": 2500,
+            "max": 4000,
+            "proportion": 0.065930272695891926
+          },
+          {
+            "min": 4000,
+            "proportion": 0.062996202968588655
+          }
+        ],
+        "category": "FAST"
+      }
+    },
+    "overall_category": "SLOW",
+    "initial_url": "https://www.sanook.com/"
+  }

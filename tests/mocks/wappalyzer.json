@@ -1,0 +1,935 @@
+{
+    "urls": {
+        "https://wisesight.com/": {
+            "status": 200
+        },
+        "https://wisesight.com/zocialeye/": {
+            "status": 200
+        },
+        "https://wisesight.com/influencer-directory/": {
+            "status": 200
+        },
+        "https://wisesight.com/warroom/": {
+            "status": 200
+        },
+        "https://wisesight.com/command-center/": {
+            "status": 304
+        },
+        "https://wisesight.com/research/": {
+            "status": 200
+        },
+        "https://wisesight.com/consulting/": {
+            "status": 304
+        },
+        "https://wisesight.com/chatbot-service/": {
+            "status": 304
+        },
+        "https://wisesight.com/monitoring/": {
+            "status": 304
+        },
+        "https://wisesight.com/zocialeye-smallbusiness-trainers": {
+            "status": 200
+        }
+    },
+    "technologies": [
+        {
+            "slug": "wordpress",
+            "name": "WordPress",
+            "description": "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database. Features include a plugin architecture and a template system.",
+            "confidence": 100,
+            "version": null,
+            "icon": "WordPress.svg",
+            "website": "https://wordpress.org",
+            "cpe": "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+            "categories": [
+                {
+                    "id": 1,
+                    "slug": "cms",
+                    "name": "CMS"
+                },
+                {
+                    "id": 11,
+                    "slug": "blogs",
+                    "name": "Blogs"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "mysql",
+            "name": "MySQL",
+            "description": "MySQL is an open-source relational database management system.",
+            "confidence": 100,
+            "version": null,
+            "icon": "MySQL.svg",
+            "website": "https://mysql.com",
+            "cpe": "cpe:2.3:a:mysql:mysql:*:*:*:*:*:*:*:*",
+            "categories": [
+                {
+                    "id": 34,
+                    "slug": "databases",
+                    "name": "Databases"
+                }
+            ]
+        },
+        {
+            "slug": "php",
+            "name": "PHP",
+            "description": "PHP is a general-purpose scripting language used for web development.",
+            "confidence": 100,
+            "version": null,
+            "icon": "PHP.svg",
+            "website": "https://php.net",
+            "cpe": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+            "categories": [
+                {
+                    "id": 27,
+                    "slug": "programming-languages",
+                    "name": "Programming languages"
+                }
+            ]
+        },
+        {
+            "slug": "anime-js",
+            "name": "anime.js",
+            "description": "Anime.js (/ˈæn.ə.meɪ/) is a lightweight JavaScript animation library with a simple, yet powerful API.It works with CSS properties, SVG, DOM attributes and JavaScript Objects.",
+            "confidence": 100,
+            "version": "2.2.0",
+            "icon": "anime.js.svg",
+            "website": "https://animejs.com/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 25,
+                    "slug": "javascript-graphics",
+                    "name": "JavaScript graphics"
+                }
+            ]
+        },
+        {
+            "slug": "element-ui",
+            "name": "Element UI",
+            "description": "Element UI is an open-source component library specifically designed for Vue.js, offering a collection of pre-designed UI components such as buttons, forms, tables, and modals.",
+            "confidence": 100,
+            "version": null,
+            "icon": "ElementUI.svg",
+            "website": "https://element.eleme.io/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 66,
+                    "slug": "ui-frameworks",
+                    "name": "UI frameworks"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "hello-elementor",
+            "name": "Hello Elementor",
+            "description": "Hello Elementor is a WordPress theme built for the Elementor website builder platform. It uses minimal styling and scripts for maximum speed and design freedom.",
+            "confidence": 100,
+            "version": "2.6.1",
+            "icon": "Hello Elementor.png",
+            "website": "https://elementor.com/hello-theme/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 80,
+                    "slug": "wordpress-themes",
+                    "name": "WordPress themes"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "react",
+            "name": "React",
+            "description": "React is an open-source JavaScript library for building user interfaces or UI components.",
+            "confidence": 100,
+            "version": null,
+            "icon": "React.svg",
+            "website": "https://reactjs.org",
+            "cpe": "cpe:2.3:a:facebook:react:*:*:*:*:*:*:*:*",
+            "categories": [
+                {
+                    "id": 12,
+                    "slug": "javascript-frameworks",
+                    "name": "JavaScript frameworks"
+                }
+            ]
+        },
+        {
+            "slug": "essential-addons-for-elementor",
+            "name": "Essential Addons for Elementor",
+            "description": "Essential Addons for Elementor gives you 70+ creative elements and extensions to help you extend the stock features of Elementor page builder.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Essential Addons for Elementor.svg",
+            "website": "https://essential-addons.com/elementor/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 87,
+                    "slug": "wordpress-plugins",
+                    "name": "WordPress plugins"
+                }
+            ]
+        },
+        {
+            "slug": "crocoblock-jetelements",
+            "name": "Crocoblock JetElements",
+            "description": "Crocoblock JetElements is an addon for Elementor that adds additional customisation options to the page builder.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Crocoblock.svg",
+            "website": "https://crocoblock.com/plugins/jetelements",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 87,
+                    "slug": "wordpress-plugins",
+                    "name": "WordPress plugins"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "hubspot-wordpress-plugin",
+            "name": "HubSpot WordPress plugin",
+            "description": "HubSpot is a platform with all the tools and integrations you need for marketing, sales, and customer service. HubSpot WordPress plugin allows you to manage contacts (CRM), engage visitors with live chat and chatbots, add beautiful forms to pages, create engaging email marketing campaigns, and more.",
+            "confidence": 100,
+            "version": "8.15.32",
+            "icon": "HubSpot.svg",
+            "website": "https://wordpress.org/plugins/leadin/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 87,
+                    "slug": "wordpress-plugins",
+                    "name": "WordPress plugins"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "ultimate-addons-for-elementor",
+            "name": "Ultimate Addons for Elementor",
+            "description": "Ultimate Addons for Elementor is a plugin that adds new widgets and modules to the Elementor page builder for WordPress, providing additional design options and functionality.",
+            "confidence": 100,
+            "version": "1.35.0",
+            "icon": "Ultimate Addons for Elementor.svg",
+            "website": "https://ultimateelementor.com",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 87,
+                    "slug": "wordpress-plugins",
+                    "name": "WordPress plugins"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "elementor",
+            "name": "Elementor",
+            "description": "Elementor is a website builder platform for professionals on WordPress.",
+            "confidence": 100,
+            "version": "3.6.7",
+            "icon": "Elementor.svg",
+            "website": "https://elementor.com",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 51,
+                    "slug": "page-builders",
+                    "name": "Page builders"
+                },
+                {
+                    "id": 87,
+                    "slug": "wordpress-plugins",
+                    "name": "WordPress plugins"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "vue-js",
+            "name": "Vue.js",
+            "description": "Vue.js is an open-source model–view–viewmodel JavaScript framework for building user interfaces and single-page applications.",
+            "confidence": 100,
+            "version": "2.6.11",
+            "icon": "vue.svg",
+            "website": "https://vuejs.org",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 12,
+                    "slug": "javascript-frameworks",
+                    "name": "JavaScript frameworks"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "gsap",
+            "name": "GSAP",
+            "description": "GSAP is an animation library that allows you to create animations with JavaScript.",
+            "confidence": 100,
+            "version": null,
+            "icon": "TweenMax.png",
+            "website": "https://greensock.com/gsap",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 12,
+                    "slug": "javascript-frameworks",
+                    "name": "JavaScript frameworks"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "yoast-seo",
+            "name": "Yoast SEO",
+            "description": "Yoast SEO is a search engine optimisation plugin for WordPress and other platforms.",
+            "confidence": 100,
+            "version": "19.6.1",
+            "icon": "Yoast SEO.png",
+            "website": "https://yoast.com/wordpress/plugins/seo/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 54,
+                    "slug": "seo",
+                    "name": "SEO"
+                },
+                {
+                    "id": 87,
+                    "slug": "wordpress-plugins",
+                    "name": "WordPress plugins"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "styled-components",
+            "name": "styled-components",
+            "description": "Styled components is a CSS-in-JS styling framework that uses tagged template literals in JavaScript.",
+            "confidence": 100,
+            "version": "5.1.0",
+            "icon": "styled-components.svg",
+            "website": "https://styled-components.com",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 12,
+                    "slug": "javascript-frameworks",
+                    "name": "JavaScript frameworks"
+                },
+                {
+                    "id": 47,
+                    "slug": "development",
+                    "name": "Development"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "amazon-web-services",
+            "name": "Amazon Web Services",
+            "description": "Amazon Web Services (AWS) is a comprehensive cloud services platform offering compute power, database storage, content delivery and other functionality.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Amazon Web Services.svg",
+            "website": "https://aws.amazon.com/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 62,
+                    "slug": "paas",
+                    "name": "PaaS"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "nginx",
+            "name": "Nginx",
+            "description": "Nginx is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Nginx.svg",
+            "website": "https://nginx.org/en",
+            "cpe": "cpe:2.3:a:f5:nginx:*:*:*:*:*:*:*:*",
+            "categories": [
+                {
+                    "id": 22,
+                    "slug": "web-servers",
+                    "name": "Web servers"
+                },
+                {
+                    "id": 64,
+                    "slug": "reverse-proxies",
+                    "name": "Reverse proxies"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "hubspot-analytics",
+            "name": "HubSpot Analytics",
+            "description": "HubSpot is a marketing and sales software that helps companies attract visitors, convert leads, and close customers.",
+            "confidence": 100,
+            "version": null,
+            "icon": "HubSpot.svg",
+            "website": "https://www.hubspot.com/products/marketing/analytics",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 10,
+                    "slug": "analytics",
+                    "name": "Analytics"
+                }
+            ]
+        },
+        {
+            "slug": "jquery-cdn",
+            "name": "jQuery CDN",
+            "description": "jQuery CDN is a way to include jQuery in your website without actually downloading and keeping it your website's folder.",
+            "confidence": 100,
+            "version": null,
+            "icon": "jQuery.svg",
+            "website": "https://code.jquery.com/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 31,
+                    "slug": "cdn",
+                    "name": "CDN"
+                }
+            ]
+        },
+        {
+            "slug": "polylang",
+            "name": "Polylang",
+            "description": "Polylang is a WordPress plugin which allows you to create multilingual WordPress site.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Polylang.svg",
+            "website": "https://wordpress.org/plugins/polylang",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 87,
+                    "slug": "wordpress-plugins",
+                    "name": "WordPress plugins"
+                },
+                {
+                    "id": 89,
+                    "slug": "translation",
+                    "name": "Translation"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "linkedin-ads",
+            "name": "Linkedin Ads",
+            "description": "Linkedin Ads is a paid marketing tool that offers access to Linkedin social networks through various sponsored posts and other methods.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Linkedin.svg",
+            "website": "https://business.linkedin.com/marketing-solutions/ads",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 36,
+                    "slug": "advertising",
+                    "name": "Advertising"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "google-tag-manager",
+            "name": "Google Tag Manager",
+            "description": "Google Tag Manager is a tag management system (TMS) that allows you to quickly and easily update measurement codes and related code fragments collectively known as tags on your website or mobile app.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Google Tag Manager.svg",
+            "website": "https://www.google.com/tagmanager",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 42,
+                    "slug": "tag-managers",
+                    "name": "Tag managers"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "getsitecontrol",
+            "name": "Getsitecontrol",
+            "description": "Getsitecontrol is a form and popup builder.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Getsitecontrol.svg",
+            "website": "https://getsitecontrol.com",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 5,
+                    "slug": "widgets",
+                    "name": "Widgets"
+                },
+                {
+                    "id": 73,
+                    "slug": "surveys",
+                    "name": "Surveys"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "amazon-s3",
+            "name": "Amazon S3",
+            "description": "Amazon S3 or Amazon Simple Storage Service is a service offered by Amazon Web Services (AWS) that provides object storage through a web service interface.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Amazon S3.svg",
+            "website": "https://aws.amazon.com/s3/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 31,
+                    "slug": "cdn",
+                    "name": "CDN"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "swiper",
+            "name": "Swiper",
+            "description": "Swiper is a JavaScript library that creates modern touch sliders with hardware-accelerated transitions.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Swiper.svg",
+            "website": "https://swiperjs.com",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 59,
+                    "slug": "javascript-libraries",
+                    "name": "JavaScript libraries"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "microsoft-clarity",
+            "name": "Microsoft Clarity",
+            "description": "Microsoft's Clarity is a analytics tool which provides website usage statistics, session recording, and heatmaps.",
+            "confidence": 100,
+            "version": "0.7.20",
+            "icon": "Microsoft Clarity.svg",
+            "website": "https://clarity.microsoft.com",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 10,
+                    "slug": "analytics",
+                    "name": "Analytics"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "linkedin-insight-tag",
+            "name": "Linkedin Insight Tag",
+            "description": "LinkedIn Insight Tag is a lightweight JavaScript tag that powers conversion tracking, website audiences, and website demographics.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Linkedin.svg",
+            "website": "https://business.linkedin.com/marketing-solutions/insight-tag",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 10,
+                    "slug": "analytics",
+                    "name": "Analytics"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "jquery-ui",
+            "name": "jQuery UI",
+            "description": "jQuery UI is a collection of GUI widgets, animated visual effects, and themes implemented with jQuery, Cascading Style Sheets, and HTML.",
+            "confidence": 100,
+            "version": "1.13.2",
+            "icon": "jQuery UI.svg",
+            "website": "https://jqueryui.com",
+            "cpe": "cpe:2.3:a:jquery:jquery_ui:*:*:*:*:*:*:*:*",
+            "categories": [
+                {
+                    "id": 59,
+                    "slug": "javascript-libraries",
+                    "name": "JavaScript libraries"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "jquery-migrate",
+            "name": "jQuery Migrate",
+            "description": "Query Migrate is a javascript library that allows you to preserve the compatibility of your jQuery code developed for versions of jQuery older than 1.9.",
+            "confidence": 100,
+            "version": "3.4.1",
+            "icon": "jQuery.svg",
+            "website": "https://github.com/jquery/jquery-migrate",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 59,
+                    "slug": "javascript-libraries",
+                    "name": "JavaScript libraries"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "jquery",
+            "name": "jQuery",
+            "description": "jQuery is a JavaScript library which is a free, open-source software designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.",
+            "confidence": 100,
+            "version": "3.7.1",
+            "icon": "jQuery.svg",
+            "website": "https://jquery.com",
+            "cpe": "cpe:2.3:a:jquery:jquery:*:*:*:*:*:*:*:*",
+            "categories": [
+                {
+                    "id": 59,
+                    "slug": "javascript-libraries",
+                    "name": "JavaScript libraries"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "hubspot",
+            "name": "HubSpot",
+            "description": "HubSpot is a marketing and sales software that helps companies attract visitors, convert leads, and close customers.",
+            "confidence": 100,
+            "version": null,
+            "icon": "HubSpot.svg",
+            "website": "https://www.hubspot.com",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 32,
+                    "slug": "marketing-automation",
+                    "name": "Marketing automation"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "hotjar",
+            "name": "Hotjar",
+            "description": "Hotjar is a suite of analytic tools to assist in the gathering of qualitative data, providing feedback through tools such as heatmaps, session recordings, and surveys.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Hotjar.svg",
+            "website": "https://www.hotjar.com",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 10,
+                    "slug": "analytics",
+                    "name": "Analytics"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "google-analytics",
+            "name": "Google Analytics",
+            "description": "Google Analytics is a free web analytics service that tracks and reports website traffic.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Google Analytics.svg",
+            "website": "https://google.com/analytics",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 10,
+                    "slug": "analytics",
+                    "name": "Analytics"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "google-adsense",
+            "name": "Google AdSense",
+            "description": "Google AdSense is a program run by Google through which website publishers serve advertisements that are targeted to the site content and audience.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Google AdSense.svg",
+            "website": "https://www.google.com/adsense/start/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 36,
+                    "slug": "advertising",
+                    "name": "Advertising"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "facebook-pixel",
+            "name": "Facebook Pixel",
+            "description": "Facebook pixel is an analytics tool that allows you to measure the effectiveness of your advertising.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Facebook.svg",
+            "website": "https://facebook.com",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 10,
+                    "slug": "analytics",
+                    "name": "Analytics"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "core-js",
+            "name": "core-js",
+            "description": "core-js is a modular standard library for JavaScript, with polyfills for cutting-edge ECMAScript features.",
+            "confidence": 100,
+            "version": "3.31.0",
+            "icon": "core-js.png",
+            "website": "https://github.com/zloirock/core-js",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 59,
+                    "slug": "javascript-libraries",
+                    "name": "JavaScript libraries"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "tippy-js",
+            "name": "Tippy.js",
+            "description": "Tippy.js is the complete tooltip, popover, dropdown, and menu solution for the web, powered by Popper.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Tippy.js.svg",
+            "website": "https://atomiks.github.io/tippyjs",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 59,
+                    "slug": "javascript-libraries",
+                    "name": "JavaScript libraries"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "recaptcha",
+            "name": "reCAPTCHA",
+            "description": "reCAPTCHA is a free service from Google that helps protect websites from spam and abuse.",
+            "confidence": 100,
+            "version": null,
+            "icon": "reCAPTCHA.svg",
+            "website": "https://www.google.com/recaptcha/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 16,
+                    "slug": "security",
+                    "name": "Security"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "google-font-api",
+            "name": "Google Font API",
+            "description": "Google Font API is a web service that supports open-source font files that can be used on your web designs.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Google Font API.svg",
+            "website": "https://google.com/fonts",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 17,
+                    "slug": "font-scripts",
+                    "name": "Font scripts"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "mailgun",
+            "name": "Mailgun",
+            "description": "Mailgun is a transactional email API service for developers.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Mailgun.svg",
+            "website": "https://www.mailgun.com/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 75,
+                    "slug": "email",
+                    "name": "Email"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "google-workspace",
+            "name": "Google Workspace",
+            "description": "Google Workspace, formerly G Suite, is a collection of cloud computing, productivity and collaboration tools.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Google.svg",
+            "website": "https://workspace.google.com/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 30,
+                    "slug": "webmail",
+                    "name": "Webmail"
+                },
+                {
+                    "id": 75,
+                    "slug": "email",
+                    "name": "Email"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "siteground",
+            "name": "SiteGround",
+            "description": "SiteGround is a web hosting service.",
+            "confidence": 100,
+            "version": null,
+            "icon": "siteground.svg",
+            "website": "https://www.siteground.com",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 62,
+                    "slug": "paas",
+                    "name": "PaaS"
+                },
+                {
+                    "id": 88,
+                    "slug": "hosting",
+                    "name": "Hosting"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "webpack",
+            "name": "Webpack",
+            "description": "Webpack is an open-source JavaScript module bundler.",
+            "confidence": 50,
+            "version": null,
+            "icon": "Webpack.svg",
+            "website": "https://webpack.js.org/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 19,
+                    "slug": "miscellaneous",
+                    "name": "Miscellaneous"
+                }
+            ]
+        },
+        {
+            "slug": "lottiefiles",
+            "name": "LottieFiles",
+            "description": "LottieFiles is an open-source animation file format that's tiny, high quality, interactive, and can be manipulated at runtime.",
+            "confidence": 100,
+            "version": "5.9.6",
+            "icon": "LottieFiles.svg",
+            "website": "https://lottiefiles.com",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 19,
+                    "slug": "miscellaneous",
+                    "name": "Miscellaneous"
+                }
+            ]
+        },
+        {
+            "slug": "popper",
+            "name": "Popper",
+            "description": "Popper is a positioning engine, its purpose is to calculate the position of an element to make it possible to position it near a given reference element.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Popper.svg",
+            "website": "https://popper.js.org",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 19,
+                    "slug": "miscellaneous",
+                    "name": "Miscellaneous"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "open-graph",
+            "name": "Open Graph",
+            "description": "Open Graph is a protocol that is used to integrate any web page into the social graph.",
+            "confidence": 100,
+            "version": null,
+            "icon": "Open Graph.png",
+            "website": "https://ogp.me",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 19,
+                    "slug": "miscellaneous",
+                    "name": "Miscellaneous"
+                }
+            ],
+            "rootPath": true
+        },
+        {
+            "slug": "module-federation",
+            "name": "Module Federation",
+            "description": "Module Federation is a webpack technology for dynamically loading parts of other independently deployed builds.",
+            "confidence": 50,
+            "version": null,
+            "icon": "Webpack.svg",
+            "website": "https://webpack.js.org/concepts/module-federation/",
+            "cpe": null,
+            "categories": [
+                {
+                    "id": 19,
+                    "slug": "miscellaneous",
+                    "name": "Miscellaneous"
+                }
+            ]
+        }
+    ]
+}
