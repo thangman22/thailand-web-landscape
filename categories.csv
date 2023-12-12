@@ -1,25 +1,25 @@
 category_code,category_description
-AUTO,Automobile
-COMM,E-commerce
-CULTR,Culture
-DATE,Online dating
-ECON,Economics
-ENV,Environment
-FILE,File-sharing
-GAME,Gaming
-GOVT,Government
-GRP,Social networking
-HOST,Hosting and blogging platforms
-HUMR,Human rights issues
-IGO,Intergovernmental organizations
-LGBT,LGBT
-MISC,Miscellaneous content
-MMED,Media sharing
-NEWS,News media
-POLR,Political criticism
-PUBH,Public health
-REL,Religion
-SPORT,Sports
-SRCH,Portal and search engines
-TRAV,Travel
-XED,Sex education
+auto,Automobile
+comm,E-commerce
+cultr,Culture
+date,Online dating
+econ,Economics
+env,Environment
+file,File-sharing
+game,Gaming
+govt,Government
+grp,Social networking
+host,Hosting and blogging platforms
+humr,Human rights issues
+igo,Intergovernmental organizations
+lgbt,LGBT
+misc,Miscellaneous content
+mmed,Media sharing
+news,News media
+polr,Political criticism
+pubh,Public health
+rel,Religion
+sport,Sports
+srch,Portal and search engines
+trav,Travel
+xed,Sex education
