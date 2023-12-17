@@ -1,35 +1,56 @@
 export default async (data) => {
   const convertedData = {}
   convertedData.audits = {}
-  convertedData.fullMetrics = data.audits.metrics.details.items[0]
-  convertedData.fullDiagnostics = data.audits.diagnostics.details.items[0]
+  const metrics = data.audits.metrics.details.items[0]
+  const diagnostics = data.audits.diagnostics.details.items[0]
+
+  for (const key in metrics) {
+    metrics[key] = parseFloat(parseFloat(metrics[key] || 0).toFixed(2))
+  }
+
+  for (const key in diagnostics) {
+    diagnostics[key] = parseFloat(parseFloat(diagnostics[key] || 0).toFixed(2))
+  }
+
+  convertedData.fullMetrics = metrics
+  convertedData.fullDiagnostics = diagnostics
   convertedData.audits.accessibility = {}
   for (const audits of data.categories.accessibility.auditRefs.map(a => a.id)) {
-    convertedData.audits.accessibility[audits] = data.audits[audits].score
+    convertedData.audits.accessibility[audits] = {
+      score: parseFloat(parseFloat(data.audits[audits].score || 0).toFixed(2)),
+      numericValue: parseFloat(parseFloat(data.audits[audits].numericValue || 0).toFixed(2))
+    }
   }
 
   convertedData.audits['best-practices'] = {}
   for (const audits of data.categories['best-practices'].auditRefs.map(a => a.id).filter(a => a.scoreDisplayMode !== 'manual')) {
-    convertedData.audits['best-practices'][audits] = data.audits[audits].score
+    convertedData.audits['best-practices'][audits] = {
+      score: parseFloat(parseFloat(data.audits[audits].score || 0).toFixed(2)),
+      numericValue: parseFloat(parseFloat(data.audits[audits].numericValue || 0).toFixed(2))
+    }
   }
 
   convertedData.audits.seo = {}
   for (const audits of data.categories.seo.auditRefs.map(a => a.id).filter(a => a.scoreDisplayMode !== 'manual')) {
-    convertedData.audits.seo[audits] = data.audits[audits].score
+    convertedData.audits.seo[audits] = {
+      score: parseFloat(parseFloat(data.audits[audits].score || 0).toFixed(2)),
+      numericValue: parseFloat(parseFloat(data.audits[audits].numericValue || 0).toFixed(2))
+    }
   }
 
   convertedData.audits.pwa = {}
   for (const audits of data.categories.pwa.auditRefs.map(a => a.id).filter(a => a.scoreDisplayMode !== 'manual')) {
-    convertedData.audits.pwa[audits] = data.audits[audits].score
+    convertedData.audits.pwa[audits] = {
+      score: parseFloat(parseFloat(data.audits[audits].score || 0).toFixed(2)),
+      numericValue: parseFloat(parseFloat(data.audits[audits].numericValue || 0).toFixed(2))
+    }
   }
 
   convertedData.audits.performance = {}
   for (const audits of data.categories.performance.auditRefs.map(a => a.id).filter(a => a.scoreDisplayMode !== 'manual').filter(a => !['diagnostics', 'metrics', 'screenshot-thumbnails', 'final-screenshot'].includes(a))) {
-    if (data.audits[audits].score > 0 || data.audits[audits].numericValue > 0) {
-      convertedData.audits.performance[audits] = {
-        score: data.audits[audits].score,
-        numericValue: data.audits[audits].numericValue
-      }
+    convertedData.audits.performance[audits] = {
+      score: parseFloat(parseFloat(data.audits[audits].score || 0).toFixed(2)),
+      numericValue: parseFloat(parseFloat(data.audits[audits].numericValue || 0).toFixed(2))
     }
   }
 

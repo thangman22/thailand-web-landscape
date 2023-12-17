@@ -25,6 +25,7 @@ export default async (url) => {
     await wappalyzer.destroy()
     return results
   } catch (error) {
+    console.log(error)
     return false
   }
 }

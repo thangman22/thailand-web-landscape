@@ -1,20 +1,22 @@
 {
   "name": "thailand-web-landscape",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.mjs",
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "extend": "CHROMIUM_BIN='/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev' node run-extend-url.mjs",
-    "analyze": "CHROMIUM_BIN='/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev' node run-analyze.mjs"
+    "extend": "GOOGLE_APPLICATION_CREDENTIALS='./key.json' CHROMIUM_BIN='/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev' node extend-url-runner.mjs",
+    "analyze": "GOOGLE_APPLICATION_CREDENTIALS='./key.json' CHROMIUM_BIN='/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev' node analyze-runner.mjs"
   },
   "dependencies": {
+    "@google-cloud/bigquery": "^7.3.0",
     "axios": "^1.6.2",
     "csvtojson": "^2.0.10",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0",
     "flat": "^6.0.1",
     "lighthouse": "^10.3.0",
-    "poolifier": "^3.0.10",
-    "puppeteer": "^21.6.0",
+    "puppeteer": "^21.6.1",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "wappalyzer": "6.10.63"
