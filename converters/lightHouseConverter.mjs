@@ -1,4 +1,5 @@
 export default async (data) => {
+  if (!data) return null
   const convertedData = {}
   convertedData.audits = {}
   const metrics = data.audits.metrics.details.items[0]

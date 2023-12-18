@@ -5,18 +5,31 @@ import wappalyzerConverter from '../converters/wappalyzerConverter.mjs'
 import webVitalsConverter from '../converters/webVitalsConverter.mjs'
 
 export default async ({ url, type }) => {
+  let lighouseResultsDesktop = null
+  let lighouseResultsMobile = null
   let wappalyzerResults = null
   if (type === 'Based') {
+    console.log('Wappalyzer started')
     wappalyzerResults = await wappalyzerProcesser(url)
   }
+  console.log('Page Speed started')
+  try {
+    lighouseResultsDesktop = await pagespeedProcesser(url, 'desktop')
+  } catch (error) {
 
-  const lighouseResultsDesktop = await pagespeedProcesser(url, 'desktop')
-  const lighouseResultsMobile = await pagespeedProcesser(url, 'mobile')
+  }
+
+  try {
+    lighouseResultsMobile = await pagespeedProcesser(url, 'mobile')
+  } catch (error) {
+
+  }
+
   return {
     wappalyzer: wappalyzerResults ? await wappalyzerConverter(wappalyzerResults) : null,
-    webvitalsMobile: lighouseResultsMobile.loadingExperience.metrics ? await webVitalsConverter(lighouseResultsMobile.loadingExperience) : null,
-    webvitalsDesktop: lighouseResultsDesktop.loadingExperience.metrics ? await webVitalsConverter(lighouseResultsDesktop.loadingExperience) : null,
-    lighthouseDesktop: await lightHouseConverter(lighouseResultsDesktop.lighthouseResult),
-    lighthouseMobile: await lightHouseConverter(lighouseResultsMobile.lighthouseResult)
+    webvitalsMobile: lighouseResultsMobile?.loadingExperience?.metrics ? await webVitalsConverter(lighouseResultsMobile.loadingExperience) : null,
+    webvitalsDesktop: lighouseResultsDesktop?.loadingExperience?.metrics ? await webVitalsConverter(lighouseResultsDesktop.loadingExperience) : null,
+    lighthouseDesktop: lighouseResultsDesktop ? await lightHouseConverter(lighouseResultsDesktop?.lighthouseResult) : null,
+    lighthouseMobile: lighouseResultsDesktop ? await lightHouseConverter(lighouseResultsMobile?.lighthouseResult) : null
   }
 }

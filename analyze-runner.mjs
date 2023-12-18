@@ -5,15 +5,38 @@ import auditLink from './libs/auditLink.mjs'
 
 const urls = await csv().fromFile('./auditUrls.csv')
 
-for (const url of urls) {
-  const bigquery = new BigQuery()
+const urlChunks = sliceIntoChunks(urls, 10)
+let processedChunks = 0
 
+for (const urls of urlChunks) {
+  processedChunks++
+  console.log(`${processedChunks}/${urlChunks.length}`)
+  const processPromise = []
+  for (const url of urls) {
+    processPromise.push(processLink(url))
+  }
+  await Promise.all(processPromise)
+}
+
+function sliceIntoChunks (arr, chunkSize) {
+  const res = []
+  for (let i = 0; i < arr.length; i += chunkSize) {
+    const chunk = arr.slice(i, i + chunkSize)
+    res.push(chunk)
+  }
+  return res
+}
+
+async function processLink (url) {
+  const bigquery = new BigQuery()
+  console.log('AUDIT STARTED FOR: ', url.Link)
   const auditRes = await auditLink({
     url: url.Link,
     type: url.Type
   })
   const dataset = bigquery.dataset('data_2023')
   const result = await finalResultConverter(auditRes, url.Domain)
+
   try {
     await dataset.table('DESKTOP_LIGHTHOUSE').insert(result.DESKTOP_LIGHTHOUSE)
     console.log(`${url.Link} inserted DESKTOP_LIGHTHOUSE`)
@@ -34,12 +57,14 @@ for (const url of urls) {
     })
     console.log(`${url.Link} inserted DESKTOP_THIRD_PARTY`)
     console.log('--------------------------------------')
-    result.TECH_STACK.map(async l => {
-      await dataset.table('TECH_STACK').insert(l)
-    })
-    console.log(`${url.Link} inserted TECH_STACK`)
+    if (result.TECH_STACK.length > 0) {
+      result.TECH_STACK.map(async l => {
+        await dataset.table('TECH_STACK').insert(l)
+      })
+      console.log(`${url.Link} inserted TECH_STACK`)
+    }
     console.log('--------------------------------------')
   } catch (e) {
-    console.log(e)
   }
+  return true
 }

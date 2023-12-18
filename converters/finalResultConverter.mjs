@@ -20,38 +20,48 @@ export default async (data, domain) => {
     })
   }
 
-  convertedData.MOBILE_THIRD_PARTY = data.lighthouseMobile.thirdParty.map(l => {
-    return {
-      ...l,
-      domain
-    }
-  })
+  if (data.lighthouseMobile) {
+    convertedData.MOBILE_THIRD_PARTY = data.lighthouseMobile.thirdParty.map(l => {
+      return {
+        ...l,
+        domain
+      }
+    })
+    delete data.lighthouseMobile.thirdParty
+  }
+  if (data.lighthouseDesktop) {
+    convertedData.DESKTOP_THIRD_PARTY = data.lighthouseDesktop.thirdParty.map(l => {
+      return {
+        ...l,
+        domain
+      }
+    })
+    delete data.lighthouseDesktop.thirdParty
+  }
 
-  convertedData.DESKTOP_THIRD_PARTY = data.lighthouseDesktop.thirdParty.map(l => {
-    return {
-      ...l,
-      domain
-    }
-  })
-  delete data.lighthouseDesktop.thirdParty
-  delete data.lighthouseMobile.thirdParty
   delete data.wappalyzer
-
-  convertedData.MOBILE_WEBVITALS = data.webvitalsMobile ? flatten(data.webvitalsMobile, { delimiter: '_' }) : null
-  if (convertedData.MOBILE_WEBVITALS) {
-    convertedData.MOBILE_WEBVITALS.domain = domain
+  if (data.webvitalsMobile) {
+    convertedData.MOBILE_WEBVITALS = flatten(data.webvitalsMobile, { delimiter: '_' })
+    if (convertedData.MOBILE_WEBVITALS) {
+      convertedData.MOBILE_WEBVITALS.domain = domain
+    }
   }
 
-  convertedData.DESKTOP_WEBVITALS = data.webvitalsDesktop ? flatten(data.webvitalsDesktop, { delimiter: '_' }) : null
-  if (convertedData.DESKTOP_WEBVITALS) {
-    convertedData.DESKTOP_WEBVITALS.domain = domain
+  if (data.webvitalsDesktop) {
+    convertedData.DESKTOP_WEBVITALS = flatten(data.webvitalsDesktop, { delimiter: '_' })
+    if (convertedData.DESKTOP_WEBVITALS) {
+      convertedData.DESKTOP_WEBVITALS.domain = domain
+    }
   }
 
-  convertedData.MOBILE_LIGHTHOUSE = flatten(data.lighthouseMobile, { delimiter: '_' })
-  convertedData.MOBILE_LIGHTHOUSE.domain = domain
+  if (data.lighthouseMobile) {
+    convertedData.MOBILE_LIGHTHOUSE = flatten(data.lighthouseMobile, { delimiter: '_' })
+    convertedData.MOBILE_LIGHTHOUSE.domain = domain
+  }
 
-  convertedData.DESKTOP_LIGHTHOUSE = flatten(data.lighthouseDesktop, { delimiter: '_' })
-  convertedData.DESKTOP_LIGHTHOUSE.domain = domain
-
+  if (data.lighthouseDesktop) {
+    convertedData.DESKTOP_LIGHTHOUSE = flatten(data.lighthouseDesktop, { delimiter: '_' })
+    convertedData.DESKTOP_LIGHTHOUSE.domain = domain
+  }
   return convertedData
 }
