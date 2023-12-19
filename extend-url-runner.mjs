@@ -1,8 +1,9 @@
+import deduplicatedUrls from './libs/deduplicateUrls.mjs'
 import extendLink from './libs/extendLink.mjs'
 import csv from 'csvtojson'
 import fs from 'fs'
 
-function shuffle (array) {
+function shuffle(array) {
   let currentIndex = array.length
   let randomIndex
   while (currentIndex > 0) {
@@ -17,11 +18,20 @@ function shuffle (array) {
   return array
 }
 
-const urlsList = await csv().fromFile('./auditDomains.csv')
+// auditDomains.csv structure:
+// domain, category_code, date_added, notes
+const converter = csv({
+  checkColumn: true,
+  delimiter: ',',
+  includeColumns: /(domain|category_code|date_added|notes)/,
+  trim: true,
+})
+const urlList = await deduplicatedUrls(await converter.fromFile('./auditDomains.csv'))
+console.log(`Unique domains: ${urlList.length}`)
 
 fs.writeFileSync('./auditUrls.csv', '')
 fs.appendFileSync('./auditUrls.csv', 'Domain, Link, Type\n')
-for (const url of urlsList) {
+for (const url of urlList) {
   console.log(`Extend ${url.domain}`)
   const extendedUrl = await extendLink(url.domain)
   fs.appendFileSync('./auditUrls.csv', `${url.domain}, https://${url.domain}, Based\n`)
