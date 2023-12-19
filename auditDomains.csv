@@ -10,31 +10,31 @@ domain,category_code,date_added,notes
 a-lct-labour.com,humr,2023-12-12,Automobile Labour Congress of Thailand [th]
 adeq.or.th,env,2023-12-12,Association for the Development of Environmental Quality [th]
 admincourt.go.th,govt,2023-12-11,
-adslthailand.com,news,2023-12-11,Telecom industry news
+adslthailand.com,news,2023-12-11,Telecom industry news [th]
 advice.co.th,comm,2023-12-12,"Computer, electronics, and accessories"
 aerothaiunion.com,humr,2023-12-12,Aerothai State Enterprise Union [th]
-agel-center.com,,2023-12-11,
+agel-center.com,comm,2023-12-11,Food supplement selling agent [th]
 aidsaccess.com,health,2023-12-12,"AIDS Access Foundation. Consultationo hotline for AIDS and unplanned pregnancy. (As of June 2020, Facebook blocked this from being shared on their platform - citing the violation of their Community Standards) [th]"
-aimc.or.th,,2023-12-11,
-airasia.com,trav,2023-12-12,
+aimc.or.th,fin,2023-12-11,Association of Investment Management Companies [th] [en]
+airasia.com,trav,2023-12-12,AirAsia
 ais.th,comm,2023-12-11,Advanced Info Service. One of the major telecommunication network operators in Thailand. [th] [en]
 ait.ac.th,edu,2023-12-11,Asian Institute of Technology [en]
 alcoholrhythm.com,health,2023-12-12,Drinking education [th]
 amarintv.com,news,2023-12-11,Amarin TV - terrestrial free-to-air television [th]
 amlo.go.th,govt,2023-12-11,
 amnesty.or.th,humr,2023-12-12,Amnesty International Thailand [th]
-amprohealth.com,,2023-12-11,
+amprohealth.com,health,2023-12-11,Health information [th]
 anamai.moph.go.th,govt,2023-12-12,Department of Health
 anet.net.th,host,2023-12-12,"ANET, an internet service provider [th]"
-anime-i.com,,2023-12-11,
+anime-i.com,ent,2023-12-11,Anime streaming [th]
 antifakenewscenter.com,govt,2023-12-12,Anti-Fake News Center Thailand by Ministry of Digital Economy and Society [th]
-aobmobile.net,,2023-12-11,
-appleforward.com,,2023-12-11,
+aobmobile.net,comm,2023-12-11,Mobile phone shop [th]
+appleforward.com,news,2023-12-11,News about Apple products and services [th]
 apsw-thailand.org,humr,2023-12-12,Association for the Promotion of the Status of Women under the Royal Patronage of HRH Princess Soamsawali
-archeep.com,,2023-12-11,
+archeep.com,,2023-12-11,Vocational information (foods and crafts) [th]
 armyprcenter.com,govt,2023-12-12,Royal Thai Army Public Relations Center [th]
 aromfoundation.org,humr,2023-12-12,"Arom Pongpangan Foundation, for labour rights [th]"
-array.co.th,,2023-12-11,
+array.co.th,comm,2023-12-11,House construction service [th]
 aru.ac.th,edu,2023-12-11,
 asco.or.th,fin,2023-12-12,
 asean-law.senate.go.th,govt,2023-12-11,
@@ -65,7 +65,7 @@ bangkokpost.co.th,,2023-12-11,Bangkok Post PCL corporate website [en]
 bangkokpost.com,news,2023-12-11,"Bangkok Post, was one of two major printed newspapers in Thailand (now only online, no longer in print) [en]"
 bangkokrainbow.org,lgbt,2023-12-12,"Bangkok Rainbow LGBT news, activities, and education [th]"
 bangkoksite.com,,2023-12-11,
-bangpleeyai.go.th,govt,2023-12-12,"Bang Phli Yai Subdistrict Administrative Organization, in Samut Prakan province [th] "
+bangpleeyai.go.th,govt,2023-12-12,"Bang Phli Yai Subdistrict Administrative Organization, in Samut Prakan province [th]"
 bangsaencabana.com,,2023-12-11,
 banidea.com,,2023-12-11,
 banmuang.co.th,,2023-12-11,
@@ -120,19 +120,17 @@ catholic.or.th,rel,2023-12-12,Bangkok Archdiocese [th]
 cct.or.th,rel,2023-12-12,Church of Christ in Thailand [th]
 central.co.th,comm,2023-12-12,Online department store
 cfan.org,rel,2023-12-12,Christ for all Nations. Old URL. [en]
-ch3plus.com,,2023-12-11,
-ch3plus.com,news,2023-12-12,"Video-on-demand service from Channel 3, a free-to-air terrestrial television owned by BEC World Public Company Limited. [th]"
-ch3thailand.com,ent,2023-12-12,
+ch3plus.com,ent,2023-12-12,"Video-on-demand service from Channel 3, a free-to-air terrestrial television owned by BEC World Public Company Limited. [th]"
 ch7.com,news,2023-12-11,"Channel 7, owned by Bangkok Broadcasting & Television Company Limited (BBTV). Free-to-air terrestrial television. Was entiredly owned by Royal Thai Army and still keeps its connection. [th]"
 chandra.ac.th,edu,2023-12-11,
 chartthaipattana.or.th,polr,2023-12-12,"Chart Thai Pattana Party, a political party [th]"
 checkraka.com,,2023-12-11,
 chemtrack.org,,2023-12-11,
 chiangmainews.co.th,news,2023-12-11,
-chillpainai.com,,2023-12-11,
-chomthai.com,,2023-12-11,
+chillpainai.com,trav,2023-12-11,
+chomthai.com,trav,2023-12-11,
 chon.go.th,govt,2023-12-12,Chonburi Provincial Administrative Organization [th]
-choosewithcareclub.com,,2023-12-11,
+choosewithcareclub.com,host,2023-12-11,
 chula.ac.th,edu,2023-12-11,A public university in Bangkok. Oldest university in Thailand. [th] [en]
 chumchonthai.or.th,humr,2023-12-12,"Chumchonthai Foundation, for ethnic communities and indigenous people [th]"
 cimbthai.com,fin,2023-12-18,
@@ -247,8 +245,7 @@ gasthai.com,,2023-12-11,
 gedgoodlife.com,health,2023-12-11,Personal health [th]
 gensiri.com,insur,2023-12-12,
 gg.in.th,game,2023-12-12,Good Games. Portal for their online games. [th]
-ghbank.co.th,,2023-12-11,Government Housing Bank [th]
-ghbank.co.th,fin,2023-12-18,
+ghbank.co.th,fin,2023-12-11,Government Housing Bank [th]
 git.or.th,,2023-12-11,
 glory-manutd.club,,2023-12-11,
 gmember.com,,2023-12-11,
@@ -759,7 +756,6 @@ thailca.com,fin,2023-12-12,
 thailife.com,insur,2023-12-12,
 thaimediafund.or.th,govt,2023-12-12,Thai Media Fund [th]
 thaimobilecenter.com,,2023-12-11,
-ThaiMTB.com,,2023-12-11,
 thaimtb.com,sport,2023-12-11,
 thainame.net,,2023-12-11,
 thainetizen.org,humr,2023-12-12,NGO on internet and human rights [th]
@@ -849,7 +845,6 @@ tunwalai.com,cultr,2023-12-12,
 tutorphon-ram.com,,2023-12-11,
 tv.mcot.net,news,2023-12-12,Channel 9. A free-to-air terrestrial television. State-owned. [th]
 tv.trueid.net,ent,2023-12-12,
-tv5.co.th,ent,2023-12-12,
 tv5.co.th,news,2023-12-12,Channel 5 - free-to-air terrestrial television. Owned by Royal Thai Army [th]
 tvca.or.th,fin,2023-12-12,
 uamulet.com,,2023-12-11,
