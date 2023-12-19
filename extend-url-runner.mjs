@@ -1,4 +1,4 @@
-import deduplicatedUrls from './libs/deduplicateUrls.mjs'
+import dedupDomains from './libs/dedupDomains.mjs'
 import extendLink from './libs/extendLink.mjs'
 import csv from 'csvtojson'
 import fs from 'fs'
@@ -26,16 +26,16 @@ const converter = csv({
   includeColumns: /(domain|category_code|date_added|notes)/,
   trim: true,
 })
-const urlList = await deduplicatedUrls(await converter.fromFile('./auditDomains.csv'))
-console.log(`Unique domains: ${urlList.length}`)
+const domainList = await dedupDomains(await converter.fromFile('./auditDomains.csv'))
+console.log(`Unique domains: ${domainList.length}`)
 
 fs.writeFileSync('./auditUrls.csv', '')
 fs.appendFileSync('./auditUrls.csv', 'Domain, Link, Type\n')
-for (const url of urlList) {
-  console.log(`Extend ${url.domain}`)
-  const extendedUrl = await extendLink(url.domain)
-  fs.appendFileSync('./auditUrls.csv', `${url.domain}, https://${url.domain}, Based\n`)
+for (const domain of domainList) {
+  console.log(`Extend ${domain.domain}`)
+  const extendedUrl = await extendLink(domain.domain)
+  fs.appendFileSync('./auditUrls.csv', `${domain.domain}, https://${domain.domain}, Based\n`)
   for (const link of shuffle(extendedUrl).slice(0, 15)) {
-    fs.appendFileSync('./auditUrls.csv', `${url.domain}, ${link}, Extendedlink\n`)
+    fs.appendFileSync('./auditUrls.csv', `${domain.domain}, ${link}, Extendedlink\n`)
   }
 }

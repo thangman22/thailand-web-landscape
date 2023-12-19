@@ -1,28 +1,28 @@
-// Description: This module contains functions for normalizing and deduplicating the URL list.
+// Description: This module contains functions for normalizing and deduplicating the domain name list.
 
 /**
- * Normalize URL list
+ * Normalize domain name list
  * Make domains and category_code lowercase, and set date_added to day zero if it is empty
  * 
- * @param {array} urlList 
- * @returns {array} normalizedUrlList
+ * @param {array} domainList 
+ * @returns {array} normalizedDomainList
  */
-function normalizeUrlList(urlList) {
+function normalizeDomainList(domainList) {
     const dayZero = '2023-12-10'  // Initial commit date of the project is 2023-12-11
-    const normalizedUrlList = urlList.filter(item => item.domain !== '').map(url => {
+    const normalizedDomainList = domainList.filter(item => item.domain !== '').map(domain => {
         return {
-            ...url,
-            domain: url.domain.toLowerCase(),
-            category_code: url.category_code.toLowerCase(),
-            date_added: url.date_added || dayZero, // If date_added is empty, use day zero
+            ...domain,
+            domain: domain.domain.toLowerCase(),
+            category_code: domain.category_code.toLowerCase(),
+            date_added: domain.date_added || dayZero, // If date_added is empty, use day zero
         };
     });
 
-    return normalizedUrlList
+    return normalizedDomainList
 }
 
 /**
- * Deduplicate URL list
+ * Deduplicate domain name list
  * 
  * Duplicated domains are removed from the list, using these rules, by this order:
  * 1. If the domain is not duplicated, it is kept
@@ -40,25 +40,23 @@ function normalizeUrlList(urlList) {
  *    the one with the category_code that comes first
  *    alphabetically (a-z) is kept
  *
- * @param {array} urlList 
- * @returns {array} deduplicatedUrls
+ * @param {array} domainList 
+ * @returns {array} deduplicatedDomains
  */
-function deduplicateUrlList(urlList) {
-    urlList = normalizeUrlList(urlList)
+function deduplicateDomainList(domainList) {
+    domainList = normalizeDomainList(domainList)
 
-    let deduplicatedUrls = []
-    for (const url of urlList) {
+    let deduplicatedDomains = []
+    for (const domain of domainList) {
         // Skip if the domain is already in the deduplicated list
-        if (deduplicatedUrls.find(item => item.domain === url.domain)) {
+        if (deduplicatedDomains.find(item => item.domain === domain.domain)) {
             continue
         }
 
-        // let duplicates = findDuplicatedDomains(url, urlList)
-        // duplicates = duplicates.concat(url)
-        const duplicates = urlList.filter(item => item.domain === url.domain)
+        const duplicates = domainList.filter(item => item.domain === domain.domain)
         // Rule 1: No duplicates
         if (duplicates.length === 1) {
-            deduplicatedUrls.push(duplicates[0])
+            deduplicatedDomains.push(duplicates[0])
             continue
         }
 
@@ -66,7 +64,7 @@ function deduplicateUrlList(urlList) {
         // the one with the category_code (not empty) is kept
         let remaining = duplicates.filter(item => item.category_code !== '')
         if (remaining.length === 1) {
-            deduplicatedUrls.push(remaining[0])
+            deduplicatedDomains.push(remaining[0])
             continue
         } else if (remaining.length === 0) {
             // If all category_code are empty, restore the original duplicates list
@@ -78,7 +76,7 @@ function deduplicateUrlList(urlList) {
         // the one with notes (not empty) is kept
         remaining = remaining.filter(item => item.category_code !== '' && item.notes !== '')
         if (remaining.length === 1) {
-            deduplicatedUrls.push(remaining[0])
+            deduplicatedDomains.push(remaining[0])
             continue
         } else if (remaining.length === 0) {
             // If no entries have category_code and notes, try ones with at least notes
@@ -100,7 +98,7 @@ function deduplicateUrlList(urlList) {
         let temp = remaining[0]
         remaining = remaining.filter(item => item.date_added === temp.date_added)
         if (remaining.length === 1) {
-            deduplicatedUrls.push(remaining[0])
+            deduplicatedDomains.push(remaining[0])
             continue
         }
 
@@ -120,15 +118,13 @@ function deduplicateUrlList(urlList) {
         remaining = remaining.sort((a, b) => {
             return a.category_code.localeCompare(b.category_code, 'en')
         })
-        deduplicatedUrls.push(remaining[0])
+        deduplicatedDomains.push(remaining[0])
         continue
     }
 
-    return deduplicatedUrls
+    return deduplicatedDomains
 }
 
-export default async (urlList) => {
-    const deduplicatedUrlList = deduplicateUrlList(urlList)
-
-    return deduplicatedUrlList
+export default async (domainList) => {
+    return deduplicateDomainList(domainList)
 }
