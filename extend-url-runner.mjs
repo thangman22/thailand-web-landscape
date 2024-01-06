@@ -1,5 +1,5 @@
 import extendLink from './libs/extendLink.mjs'
-import csv from 'csvtojson'
+import { csv2json } from 'json-2-csv'
 import fs from 'fs'
 
 function shuffle (array) {
@@ -17,7 +17,12 @@ function shuffle (array) {
   return array
 }
 
-let urlsList = await csv().fromFile('./auditDomains.csv')
+let urlsList = csv2json(fs.readFileSync('./auditDomains.valid.csv', 'utf8'), {
+  delimiter: {
+    eol: '\n'
+  },
+  excelBOM: true
+})
 urlsList = [...new Set(urlsList.map((url) => url.domain))]
 fs.writeFileSync('./auditUrls.csv', '')
 fs.appendFileSync('./auditUrls.csv', 'Domain, Link, Type\n')

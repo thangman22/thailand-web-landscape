@@ -37,24 +37,21 @@ const runValidateLink = async (url) => {
   }
   validUrls.push(url)
   consola.success(`${url.domain} is Valid`)
+  return true
 }
 
-const sleep = ms => new Promise(r => setTimeout(r, ms))
-
 for (const url of domainList) {
-  runValidateLink(url)
-  await sleep(1000)
+  await runValidateLink(url)
 }
 
 while (processingList.length > 0) {
   console.log(`PENDING: ${processingList.length} / ${domainList.length}`)
-  await sleep(1000)
 }
 
 console.log('-----------------------------------------')
 const validCSV = json2csv(validUrls)
-console.log(validCSV)
+fs.writeFileSync('./auditDomains.valid.csv', validCSV)
 
 console.log('-----------------------------------------')
 const notValidCSV = json2csv(notValidUrls)
-console.log(notValidCSV)
+fs.writeFileSync('./auditDomains.invalid.csv', notValidCSV)
