@@ -17,15 +17,15 @@ function shuffle (array) {
   return array
 }
 
-const urlsList = await csv().fromFile('./auditDomains.csv')
-
+let urlsList = await csv().fromFile('./auditDomains.csv')
+urlsList = [...new Set(urlsList.map((url) => url.domain))]
 fs.writeFileSync('./auditUrls.csv', '')
 fs.appendFileSync('./auditUrls.csv', 'Domain, Link, Type\n')
 for (const url of urlsList) {
-  console.log(`Extend ${url.domain}`)
-  const extendedUrl = await extendLink(url.domain)
-  fs.appendFileSync('./auditUrls.csv', `${url.domain}, https://${url.domain}, Based\n`)
+  console.log(`Extend ${url}`)
+  const extendedUrl = await extendLink(url)
+  fs.appendFileSync('./auditUrls.csv', `${url}, http://${url}, Based\n`)
   for (const link of shuffle(extendedUrl).slice(0, 15)) {
-    fs.appendFileSync('./auditUrls.csv', `${url.domain}, ${link}, Extendedlink\n`)
+    fs.appendFileSync('./auditUrls.csv', `${url}, ${link}, Extendedlink\n`)
   }
 }

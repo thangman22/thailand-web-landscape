@@ -1,28 +1,28 @@
 import puppeteer from 'puppeteer-extra'
 import StealthPlugin from 'puppeteer-extra-plugin-stealth'
-
 export default async (url) => {
   let links = []
   puppeteer.use(StealthPlugin())
   const browser = await puppeteer.launch({
+    ignoreHTTPSErrors: true,
     headless: 'new',
     executablePath: process.env.CHROMIUM_BIN
   })
   const page = await browser.newPage()
-
+  await page.setDefaultNavigationTimeout(60000)
   try {
-    await page.setDefaultNavigationTimeout(15000)
-    await page.goto(`https://${url}`)
+    await page.goto(`http://${url}`, {
+      waitUntil: 'domcontentloaded'
+    })
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 
   try {
     const hrefs = await page.$$eval('a', as => as.map(a => a.href))
-    console.log(hrefs)
-    links = [...new Set(hrefs.filter(h => h.includes(url)))]
+    links = [...new Set(hrefs.filter(h => h.includes(url) && !['facebook.com', 'line.me'].includes(h)))]
   } catch (error) {
-    console.log(error)
+
   }
 
   await browser.close()
