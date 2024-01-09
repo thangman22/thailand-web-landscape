@@ -1,9 +1,8 @@
-import dedupDomains from './libs/dedupDomains.mjs'
 import extendLink from './libs/extendLink.mjs'
 import { csv2json } from 'json-2-csv'
 import fs from 'fs'
 
-function shuffle(array) {
+function shuffle (array) {
   let currentIndex = array.length
   let randomIndex
   while (currentIndex > 0) {
