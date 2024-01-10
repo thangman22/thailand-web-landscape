@@ -5,14 +5,15 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "extend": "GOOGLE_APPLICATION_CREDENTIALS='./key.json' CHROMIUM_BIN='/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev' node extend-url-runner.mjs",
-    "analyze": "GOOGLE_APPLICATION_CREDENTIALS='./key.json' CHROMIUM_BIN='/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev' node analyze-runner.mjs",
-    "validate": "GOOGLE_APPLICATION_CREDENTIALS='./key.json' CHROMIUM_BIN='/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev' node validate-link-runner.mjs"
+    "extend": "cross-env GOOGLE_APPLICATION_CREDENTIALS='./key.json' CHROMIUM_BIN=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" node extend-url-runner.mjs",
+    "analyze": "cross-env GOOGLE_APPLICATION_CREDENTIALS='./key.json' CHROMIUM_BIN=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" node analyze-runner.mjs",
+    "validate": "cross-env GOOGLE_APPLICATION_CREDENTIALS='./key.json' CHROMIUM_BIN=\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" node validate-link-runner.mjs"
   },
   "dependencies": {
     "@google-cloud/bigquery": "^7.3.0",
     "axios": "^1.6.2",
     "consola": "^3.2.3",
+    "cross-env": "^7.0.3",
     "firebase-admin": "^11.5.0",
     "firebase-functions": "^4.2.0",
     "flat": "^6.0.1",

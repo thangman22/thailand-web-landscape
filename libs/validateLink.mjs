@@ -9,12 +9,22 @@ export default async (url) => {
         Accept: 'application/json, text/plain, */*',
         'Accept-Encoding': 'gzip, compress, deflate, br'
       },
+      rejectUnauthorized: false,
       timeout: 10000
     })
     result = true
   } catch (error) {
-    consola.error(url)
-    consola.error(error)
+    if (error.response) {
+      if (error.response.status === 403) {
+        result = true
+      } else {
+        consola.error(url, error.message)
+      }
+    } else if (error.message.includes('timeout of')) {
+      result = true
+    } else {
+      consola.error(url, error.message)
+    }
   }
 
   return result
