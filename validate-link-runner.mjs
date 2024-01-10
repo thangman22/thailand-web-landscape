@@ -5,7 +5,7 @@ import { json2csv, csv2json } from 'json-2-csv'
 import fs from 'fs'
 const validUrls = []
 const notValidUrls = []
-const domainList = await dedupDomains(csv2json(fs.readFileSync('./auditDomains.csv', 'utf8'), {
+const domainList = await dedupDomains(csv2json(fs.readFileSync('./auditDomains.valid.csv', 'utf8'), {
   delimiter: {
     eol: '\r\n'
   },

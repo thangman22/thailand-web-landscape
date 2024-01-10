@@ -25,12 +25,12 @@ let urlsList = csv2json(fs.readFileSync('./auditDomains.valid.csv', 'utf8'), {
 })
 urlsList = [...new Set(urlsList.map((url) => url.domain))]
 fs.writeFileSync('./auditUrls.csv', '')
-fs.appendFileSync('./auditUrls.csv', 'Domain, Link, Type\n')
+fs.appendFileSync('./auditUrls.csv', 'Domain,Link,Type\n')
 for (const url of urlsList) {
   console.log(`Extend ${url}`)
   const extendedUrl = await extendLink(url)
-  fs.appendFileSync('./auditUrls.csv', `${url}, http://${url}, Based\n`)
+  fs.appendFileSync('./auditUrls.csv', `${url},http://${url},Based\n`)
   for (const link of shuffle(extendedUrl).slice(0, 15)) {
-    fs.appendFileSync('./auditUrls.csv', `${url}, ${link}, Extendedlink\n`)
+    fs.appendFileSync('./auditUrls.csv', `${url},${link},Extendedlink\n`)
   }
 }
