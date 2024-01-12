@@ -1,36 +1,16 @@
-import { csv2json } from 'json-2-csv'
+import functions from 'firebase-functions/v1'
 import finalResultConverter from './converters/finalResultConverter.mjs'
 import { BigQuery } from '@google-cloud/bigquery'
 import auditLink from './libs/auditLink.mjs'
-import fs from 'fs'
-const urlsList = await csv2json(fs.readFileSync('./auditUrls.csv', 'utf8'), {
-  delimiter: {
-    eol: '\n'
-  },
-  excelBOM: true
+
+export const runAnalyze = functions.runWith({
+  timeoutSeconds: 540
+}).region('asia-southeast1').https.onRequest(async (request, response) => {
+  const requestDomain = request.body.requestDomain
+  console.log(requestDomain)
+  const result = await processLink(requestDomain)
+  return response.send(result)
 })
-
-const urlChunks = sliceIntoChunks(urlsList, 20)
-let processedChunks = 0
-
-for (const urls of urlChunks) {
-  processedChunks++
-  console.log(`${processedChunks}/${urlChunks.length}`)
-  const processPromise = []
-  for (const url of urls) {
-    processPromise.push(processLink(url))
-  }
-  await Promise.all(processPromise)
-}
-
-function sliceIntoChunks (arr, chunkSize) {
-  const res = []
-  for (let i = 0; i < arr.length; i += chunkSize) {
-    const chunk = arr.slice(i, i + chunkSize)
-    res.push(chunk)
-  }
-  return res
-}
 
 async function processLink (url) {
   const bigquery = new BigQuery()
@@ -40,6 +20,7 @@ async function processLink (url) {
     type: url.Type,
     process: ['pagespeed-desktop', 'pagespeed-mobile', 'builtwith']
   })
+
   const dataset = bigquery.dataset('dataset_jan_2024')
   const result = await finalResultConverter(auditRes, url.Domain)
 
@@ -75,7 +56,7 @@ async function processLink (url) {
     }
     console.log('--------------------------------------')
   } catch (e) {
-    console.log(e)
+    console.log(JSON.stringify(e))
   }
-  return true
+  return result
 }

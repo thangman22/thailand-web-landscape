@@ -1,7 +1,6 @@
 export default async (data) => {
   if (!data) return null
   if (!data.audits.diagnostics.details) return null
-  if (!data.audits.metrics.detail) return null
   const convertedData = {}
   convertedData.audits = {}
   const metrics = data.audits.metrics.details.items[0]

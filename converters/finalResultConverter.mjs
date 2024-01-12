@@ -20,6 +20,15 @@ export default async (data, domain) => {
     })
   }
 
+  if (data.builtwith) {
+    convertedData.TECH_STACK = data.builtwith.map(l => {
+      return {
+        ...l,
+        domain
+      }
+    })
+  }
+
   if (data.lighthouseMobile) {
     convertedData.MOBILE_THIRD_PARTY = data.lighthouseMobile.thirdParty.map(l => {
       return {
