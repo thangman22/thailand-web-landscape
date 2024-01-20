@@ -15,5 +15,5 @@ for (const url of urlsList) {
   await sleep(300)
 
   console.log(url)
-  axios.post('https://asia-southeast1-thailand-web-landscape-gcp.cloudfunctions.net/runAnalyze', { requestDomain: url }).catch(e => {})
+  await axios.post('https://asia-southeast1-thailand-web-landscape-gcp.cloudfunctions.net/runAnalyze', { requestDomain: url })
 }

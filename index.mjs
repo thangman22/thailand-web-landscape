@@ -7,7 +7,6 @@ export const runAnalyze = functions.runWith({
   timeoutSeconds: 540
 }).region('asia-southeast1').https.onRequest(async (request, response) => {
   const requestDomain = request.body.requestDomain
-  console.log(requestDomain)
   const result = await processLink(requestDomain)
   return response.send(result)
 })
