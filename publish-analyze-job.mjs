@@ -11,5 +11,5 @@ const urlsList = await csv2json(fs.readFileSync('./auditUrls.csv', 'utf8'), {
 
 for (const url of urlsList) {
   console.log(url)
-  await axios.post('http://127.0.0.1:5001/thailand-web-landscape-gcp/asia-southeast1/runAnalyze', { requestDomain: url })
+  await axios.post('https://asia-southeast1-thailand-web-landscape-gcp.cloudfunctions.net/runAnalyze', { requestDomain: url })
 }
