@@ -10,40 +10,21 @@ const urlsList = await csv2json(fs.readFileSync('./auditUrls.csv', 'utf8'), {
   excelBOM: true
 })
 
-const urlChunks = sliceIntoChunks(urlsList, 20)
-let processedChunks = 0
-
-for (const urls of urlChunks) {
-  processedChunks++
-  console.log(`${processedChunks}/${urlChunks.length}`)
-  const processPromise = []
-  for (const url of urls) {
-    processPromise.push(processLink(url))
-  }
-  await Promise.all(processPromise)
-}
-
-function sliceIntoChunks (arr, chunkSize) {
-  const res = []
-  for (let i = 0; i < arr.length; i += chunkSize) {
-    const chunk = arr.slice(i, i + chunkSize)
-    res.push(chunk)
-  }
-  return res
+for (const url of urlsList) {
+  await processLink(url)
 }
 
 async function processLink (url) {
   const bigquery = new BigQuery()
   console.log('AUDIT STARTED FOR: ', url.Link)
-  const auditRes = await auditLink({
-    url: url.Link,
-    type: url.Type,
-    process: ['pagespeed-desktop', 'pagespeed-mobile', 'builtwith']
-  })
-  const dataset = bigquery.dataset('dataset_jan_2024')
-  const result = await finalResultConverter(auditRes, url.Domain)
-
   try {
+    const auditRes = await auditLink({
+      url: url.Link,
+      type: url.Type,
+      process: ['pagespeed-desktop', 'pagespeed-mobile']
+    })
+    const dataset = bigquery.dataset('dataset_jan_2024')
+    const result = await finalResultConverter(auditRes, url.Domain)
     await dataset.table('DESKTOP_LIGHTHOUSE').insert(result.DESKTOP_LIGHTHOUSE)
     console.log(`${url.Link} ${url.Domain} inserted DESKTOP_LIGHTHOUSE`)
     await dataset.table('MOBILE_LIGHTHOUSE').insert(result.MOBILE_LIGHTHOUSE)

@@ -9,7 +9,11 @@ const urlsList = await csv2json(fs.readFileSync('./auditUrls.csv', 'utf8'), {
   excelBOM: true
 })
 
+const sleep = ms => new Promise(r => setTimeout(r, ms))
+
 for (const url of urlsList) {
+  await sleep(300)
+
   console.log(url)
-  await axios.post('http://127.0.0.1:5001/thailand-web-landscape-gcp/asia-southeast1/runAnalyze', { requestDomain: url })
+  axios.post('https://asia-southeast1-thailand-web-landscape-gcp.cloudfunctions.net/runAnalyze', { requestDomain: url }).catch(e => {})
 }

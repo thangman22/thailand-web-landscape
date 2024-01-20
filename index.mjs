@@ -18,7 +18,7 @@ async function processLink (url) {
   const auditRes = await auditLink({
     url: url.Link,
     type: url.Type,
-    process: ['pagespeed-desktop', 'pagespeed-mobile', 'builtwith']
+    process: ['pagespeed-desktop', 'pagespeed-mobile']
   })
 
   const dataset = bigquery.dataset('dataset_jan_2024')

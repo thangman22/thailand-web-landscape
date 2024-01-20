@@ -3,9 +3,10 @@ import dedupDomains from './libs/dedupDomains.mjs'
 import consola from 'consola'
 import { json2csv, csv2json } from 'json-2-csv'
 import fs from 'fs'
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0
 const validUrls = []
 const notValidUrls = []
-const domainList = await dedupDomains(csv2json(fs.readFileSync('./auditDomains.valid.csv', 'utf8'), {
+const domainList = await dedupDomains(csv2json(fs.readFileSync('./auditDomains.csv', 'utf8'), {
   delimiter: {
     eol: '\r\n'
   },
